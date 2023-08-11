@@ -86,5 +86,47 @@ table {
 
 --border-radius: 0.75rem;
 
-
+--fw-bold: 700;
+--fw-regular: 400;
 }
+
+body {
+    padding: 2.5rem 1.5rem 5rem;
+    font-family: var(--ff-primary);
+    color: var(--clr-black);
+    background-image: url(assets/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: 0% -40%;
+}
+
+.wrapper {
+    max-width: 30rem;
+}
+
+header {
+}
+
+.hero-content {
+    margin: 4rem 0rem;
+}
+
+h1 {
+    font-size: var(--fs-H1-small);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1.25rem;
+}
+
+p {
+    font-size: var(--fs-body-small);
+    line-height: var(--lh-body-small);
+}
+
+
+.app {
+    text-align: center;
+}
+
+#phone {
+    width: 13rem;
+}
+
