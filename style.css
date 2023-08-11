@@ -220,7 +220,7 @@ a {
     color: var(--clr-black);
 }
 
-#android-btn {
+#android-svg {
     fill: var(--clr-black)
 }
 
@@ -245,12 +245,20 @@ footer > img {
     gap: 1rem;
 }
 
+.social-media > a {
+    padding
+}
+
+.social-icon {
+    fill: var(--clr-black);
+}
+
 
 /* || Tablet */
 @media (min-width: 48em) {
     body { 
         background-image: url(assets/bg-pattern-1.svg), url(assets/bg-main-tablet.png);
-        background-size: 35%, 100%;
+        background-size: clamp(15rem, 35%, 25rem) auto, 100%;
         background-repeat: no-repeat;
         background-position: 105% -3%, center top;
     }
@@ -261,6 +269,8 @@ footer > img {
 
     header {
         padding: 2.5rem 2.5rem;
+        width: 100%;
+        margin-bottom: 4rem;
     }
 
     .bg-pattern-1 {
@@ -279,7 +289,7 @@ footer > img {
         font-size: var(--fs-H1-medium);
         line-height: var(--lh-H1-medium);
         letter-spacing: var(--ls-H1-medium);
-        margin-right: clamp(19rem, 40vw, 26rem);
+        margin-right: clamp(10rem, 35%, 15rem);
 
     }
 
@@ -295,11 +305,9 @@ footer > img {
     }
 
     main {
-        background-color: var(--clr-black);
         border-radius: var(--border-radius);
         background-size: 45%;
-        background-position: 60% -3rem;
-        
+        background-position: 65% -3rem;
         height: 38rem;
         width: calc(100vw - 5rem);
     }
@@ -312,7 +320,7 @@ footer > img {
     }
 
     #phone {
-        width: 17rem;
+        width: 20rem;
     }
 
     section {
@@ -325,6 +333,7 @@ footer > img {
         transform: translate(50%, -50%);
     }
 
+  
     footer {
         padding: 15rem 2.5rem 5rem;
     }
@@ -332,10 +341,101 @@ footer > img {
     .footer-content {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     .footer-text {
-        margin-bottom:0;
+        margin-bottom: 0;
+        width: 60%;
     }
 }
 
+/* || Desktop */
+@media (min-width: 90em) {
+
+    body { 
+        background-image: url(assets/bg-pattern-1.svg), url(assets/bg-main-desktop.png);
+        background-size: 20%, 130%;
+        background-repeat: no-repeat;
+        background-position: 100% -3rem, -20rem -10rem;
+
+    }
+
+    .wrapper {
+        max-width: 70rem;
+    }
+
+    header {
+        padding: 2.5rem 0;
+        margin-top: 4rem;
+    }
+
+    .hero-content {
+        margin-bottom: 15rem;
+    }
+
+    h1 {
+        font-size: var(--fs-H1-large);
+        line-height: var(--lh-H1-large);
+        letter-spacing: var(--ls-H1-large);
+        margin-right: 20%;
+        margin-bottom: 3rem;
+    }
+
+    h2 {
+        font-size: var(--fs-H2-large);
+    }
+
+    h2 + p {
+        font-size: var(--fs-body-large);
+    }
+
+    p {
+        font-size: var(--fs-body-large);
+        line-height: var(--lh-body-large);
+        line-height: var(--lh-body-large);
+    }
+
+    main {
+        background-color: var(--clr-black);
+        border-radius: var(--border-radius);
+        background-size: 30%;
+        background-position: 45% -2rem;
+    }
+
+    .app {
+        position: absolute;
+        top: 8rem;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    section {
+        top: 27rem;
+        right: 30%;
+        width: 40%;
+        border-radius: var(--border-radius);
+        padding: 3rem 2.5rem;
+        color: var(--clr-white);
+        transform: translate(50%, -50%);
+    }
+
+    footer {
+        width: 100%;
+        padding: 15rem 0 5rem;
+
+    }
+
+    .apple-btn:hover {
+        background-color: var(--clr-aqua);
+    }
+   
+    .android-btn:hover {
+        background-color: var(--clr-sunrise);
+    }
+
+    .social-icon:hover {
+        fill: var(--clr-coral);
+        cursor: pointer;
+    }
+}
