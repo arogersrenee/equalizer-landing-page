@@ -246,7 +246,7 @@ footer > img {
 }
 
 .social-media > a {
-    padding
+    padding: 0;
 }
 
 .social-icon {
@@ -348,6 +348,8 @@ footer > img {
         margin-bottom: 0;
         width: 60%;
     }
+
+    
 }
 
 /* || Desktop */
