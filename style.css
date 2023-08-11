@@ -88,15 +88,22 @@ table {
 
 --fw-bold: 700;
 --fw-regular: 400;
+
+--padding-lr: 1.5rem;
+
 }
 
+
 body {
-    padding: 2.5rem 1.5rem 5rem;
     font-family: var(--ff-primary);
     color: var(--clr-black);
     background-image: url(assets/bg-main-mobile.png);
     background-repeat: no-repeat;
-    background-position: 0% -40%;
+    background-position: left -25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .wrapper {
@@ -104,10 +111,11 @@ body {
 }
 
 header {
+    padding: 2.5rem var(--padding-lr);
 }
 
 .hero-content {
-    margin: 4rem 0rem;
+    margin: 4rem 0rem 8rem;
 }
 
 h1 {
@@ -121,12 +129,118 @@ p {
     line-height: var(--lh-body-small);
 }
 
+main {
+    background-color: var(--clr-black);
+    border-radius: var(--border-radius) var(--border-radius) 0;
+    position: relative;
+    background-image: url(assets/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 75%;
+    height: 38rem;
+    width: 100%;
+}
 
 .app {
-    text-align: center;
+    position: absolute;
+    top: -7rem;
+    left: 50%;
+    transform: translate(-50%,0)
 }
 
 #phone {
     width: 13rem;
 }
 
+section {
+    background-color: var(--clr-coral);
+    position: absolute;
+    top: 65%;
+    z-index: 99;
+    width: 100%;
+    border-radius: var(--border-radius) var(--border-radius);
+    padding: 3rem 2.5rem;
+    color: var(--clr-white);
+}
+
+h2 {
+    font-size: var(--fs-H2-small);
+    font-weight: var(--fw-bold);
+    margin-bottom: 0.75rem;
+}
+
+section > p {
+    font-size: var(--fs-body-medium);
+}
+
+.price-rate {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.5rem 0;
+}
+
+.price {
+    font-size: 4rem;
+    font-weight: var(--fw-bold);
+}
+
+.price + p {
+    font-size: var(--fs-body-large);
+}
+
+.download-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+a {
+    display: flex;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    justify-content: center;
+    gap: 0.75rem;
+    align-items: center;
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+}
+
+.apple-btn {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
+
+#apple-svg {
+    fill: var(--clr-white);
+}
+
+.android-btn {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+}
+
+#android-btn {
+    fill: var(--clr-black)
+}
+
+footer {
+    padding: 23rem var(--padding-lr) 5rem;
+}
+
+footer > img {
+    margin-bottom: 1.5rem;
+}
+
+.footer-text {
+    margin-bottom: 2.5rem;
+}
+
+.footer-email {
+    font-weight: var(--fw-bold);
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
